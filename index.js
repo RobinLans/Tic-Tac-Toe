@@ -36,10 +36,12 @@ boxes.forEach((e, index) => {
                 }
             }
             if (player1.length === 5 && player2.length === 4) {
-                modal.classList.remove("hidden");
-                overlay.classList.remove("hidden");
-                winnerText.innerText = "Draw";
-                console.log("jag är blg");
+                if (!checkIfWin(player1) && !checkIfWin(player2)) {
+                    modal.classList.remove("hidden");
+                    overlay.classList.remove("hidden");
+                    winnerText.innerText = "Draw";
+                    console.log("jag är blg");
+                }
             }
         }
     });
